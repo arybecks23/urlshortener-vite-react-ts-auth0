@@ -12,6 +12,11 @@ const shortenedUrlSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    description: {
+      type: String,
+      required: false,
+      default: "",
+    },
     clicks: {
       type: Number,
       default: 0,

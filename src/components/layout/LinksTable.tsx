@@ -57,9 +57,7 @@ export default function LinksTable({ links, setEditData }: Props) {
                         <a
                           target="_blank"
                           className="underline"
-                          href={`${import.meta.env.VITE_AUTH0_AUDIENCE}/${
-                            link.shortenedUrl
-                          }`}
+                          href={`${window.location.origin}/${link.shortenedUrl}`}
                         >
                           {link.shortenedUrl}
                         </a>

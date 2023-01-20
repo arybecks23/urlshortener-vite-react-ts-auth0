@@ -6,8 +6,8 @@ import { Navigate } from "react-router-dom";
 import DashboardNav from "../components/layout/DashboardNav";
 import DeleteModal from "../components/layout/DeleteModal";
 import EditUrlSlideOverPanel from "../components/layout/EditUrlSlideOverPanel";
+import LinksTable from "../components/layout/LinksTable";
 import NewUrlSlideOverPanel from "../components/layout/NewUrlSlideOverPanel";
-import LinksTable from "./LinksTable";
 
 type LinkData = {
   _id: string;

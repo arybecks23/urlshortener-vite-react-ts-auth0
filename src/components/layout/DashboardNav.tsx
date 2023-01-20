@@ -17,7 +17,7 @@ const DashboardNav = (props: Props) => {
                   <div className="flex-shrink-0">
                     <img
                       className="h-8 w-8"
-                      src="/public/images/logo.png"
+                      src="/images/logo.png"
                       alt="Logo"
                     />
                   </div>

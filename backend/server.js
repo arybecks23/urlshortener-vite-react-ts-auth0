@@ -30,7 +30,9 @@ app.use(
 );
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(helmet());
+// app.use(
+//   helmet()
+// );
 app.use(express.static(path.join(__dirname, "../dist")));
 
 // app.use(checkJwt);
@@ -40,16 +42,14 @@ mongoose.connection.once("open", () => {
   console.log("Connection established successfully.");
 });
 
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../dist/index.html"));
+});
+app.get("/dashboard", (req, res) => {
+  res.sendFile(path.join(__dirname, "../dist/index.html"));
+});
 app.use("/api/public/urls", publicURLsRoute);
 app.use("/api/private/urls", checkJwt, privateURLsRoute);
-
-// app.get("/api/private/myurls", checkJwt, getMyURLs, (req, res) => {
-//   if (req.urls) {
-//     res.json(req.urls);
-//   } else {
-//     res.sendStatus(204);
-//   }
-// });
 
 app.get("/*", async (req, res) => {
   const short = req.params[0];
@@ -64,14 +64,6 @@ app.get("/*", async (req, res) => {
     res.sendStatus(404);
   }
 });
-
-// const checkScopes = requiredScopes("read:messages");
-// app.get("/api/private-scoped", checkJwt, checkScopes, function (req, res) {
-//   res.json({
-//     message:
-//       "Hello from a private endpoint! You need to be authenticated and have a scope of read:messages to see this.",
-//   });
-// });
 
 app.listen(5600, function () {
   console.log("Listening on http://localhost:5600");

@@ -21,7 +21,7 @@ const Header = (props: Props) => {
     <>
       <div className="flex flex-row w-full place-content-between items-center bg-yellow-200 p-9">
         <div>
-          <img src="/public/images/logo.png" alt="logo" className="h-8 w-8" />
+          <img src="/images/logo.png" alt="logo" className="h-8 w-8" />
           {/* <span className="font-bold text-xl">Logo</span> */}
         </div>
         <div className="w-7 inline-block md:hidden ">

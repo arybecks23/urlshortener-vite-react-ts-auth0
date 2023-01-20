@@ -64,13 +64,13 @@ export default function DeleteModal({
                     as="h3"
                     className="text-lg leading-6 font-medium text-gray-900"
                   >
-                    Deactivate account
+                    Delete URL
                   </Dialog.Title>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">
-                      Are you sure you want to deactivate your account? All of
-                      your data will be permanently removed from our servers
-                      forever. This action cannot be undone.
+                      Are you sure you want to delete this URL? This URL will be
+                      permanently removed from our servers forever. This action
+                      cannot be undone.
                     </p>
                   </div>
                 </div>

@@ -8,7 +8,7 @@ const DashboardNav = (props: Props) => {
   const { user, logout } = useAuth0();
   if (user) {
     return (
-      <Disclosure as="nav" className="bg-gray-800">
+      <Disclosure as="nav" className="bg-cyan-600">
         {({ open }) => (
           <>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,8 +17,8 @@ const DashboardNav = (props: Props) => {
                   <div className="flex-shrink-0">
                     <img
                       className="h-8 w-8"
-                      src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                      alt="Workflow"
+                      src="/src/assets/logo.png"
+                      alt="Logo"
                     />
                   </div>
                 </div>

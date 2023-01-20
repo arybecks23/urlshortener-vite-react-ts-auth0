@@ -68,15 +68,15 @@ export default function NewUrlSlideOverPanel({
                   }}
                 >
                   <div className="flex-1 h-0 overflow-y-auto">
-                    <div className="py-6 px-4 bg-indigo-700 sm:px-6">
+                    <div className="py-6 px-4 bg-cyan-700 sm:px-6">
                       <div className="flex items-center justify-between">
                         <Dialog.Title className="text-lg font-medium text-white">
-                          New Project
+                          New URL
                         </Dialog.Title>
                         <div className="ml-3 h-7 flex items-center">
                           <button
                             type="button"
-                            className="bg-indigo-700 rounded-md text-indigo-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
+                            className="bg-cyan-700 rounded-md text-cyan-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white"
                             onClick={() => setOpen(false)}
                           >
                             <span className="sr-only">Close panel</span>
@@ -85,9 +85,9 @@ export default function NewUrlSlideOverPanel({
                         </div>
                       </div>
                       <div className="mt-1">
-                        <p className="text-sm text-indigo-300">
-                          Get started by filling in the information below to
-                          create your new project.
+                        <p className="text-sm text-cyan-300">
+                          Paste your long URL and make sure to add a description
+                          for a future reference.
                         </p>
                       </div>
                     </div>
@@ -109,8 +109,9 @@ export default function NewUrlSlideOverPanel({
                                   setErrors("");
                                   setUrl(e.target.value);
                                 }}
+                                autoComplete="off"
                                 id="project-name"
-                                className="block w-full shadow-sm sm:text-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                                className="block w-full shadow-sm sm:text-sm focus:ring-cyan-500 focus:border-cyan-500 border-gray-300 rounded-md"
                               />
                             </div>
                           </div>
@@ -127,7 +128,7 @@ export default function NewUrlSlideOverPanel({
                                 name="description"
                                 onChange={(e) => setDescription(e.target.value)}
                                 rows={4}
-                                className="block w-full shadow-sm sm:text-sm focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md"
+                                className="block w-full shadow-sm sm:text-sm focus:ring-cyan-500 focus:border-cyan-500 border border-gray-300 rounded-md"
                                 defaultValue={""}
                               />
                             </div>
@@ -145,7 +146,7 @@ export default function NewUrlSlideOverPanel({
                                     name="privacy"
                                     aria-describedby="privacy-public-description"
                                     type="radio"
-                                    className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
+                                    className="focus:ring-cyan-500 h-4 w-4 text-cyan-600 border-gray-300"
                                     defaultChecked
                                   />
                                 </div>
@@ -173,7 +174,7 @@ export default function NewUrlSlideOverPanel({
                                       name="privacy"
                                       aria-describedby="privacy-private-to-project-description"
                                       type="radio"
-                                      className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
+                                      className="focus:ring-cyan-500 h-4 w-4 text-cyan-600 border-gray-300"
                                     />
                                   </div>
                                   <div className="pl-7 text-sm">
@@ -230,14 +231,14 @@ export default function NewUrlSlideOverPanel({
                   <div className="flex-shrink-0 px-4 py-4 flex justify-end">
                     <button
                       type="button"
-                      className="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                      className="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
                       onClick={() => setOpen(false)}
                     >
                       Cancel
                     </button>
                     <button
                       type="submit"
-                      className="ml-4 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                      className="ml-4 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-cyan-600 hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500"
                     >
                       Save
                     </button>

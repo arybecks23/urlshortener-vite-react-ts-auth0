@@ -1,7 +1,6 @@
 {
-  "name": "new-urlshortener-vite-ts-auth0",
-  "private": true,
-  "version": "0.0.0",
+  "name": "urlshortener-vite-ts-auth0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -6,13 +6,11 @@ type Props = {};
 
 const DashboardNav = (props: Props) => {
   const { user, logout } = useAuth0();
-
   if (user) {
     return (
       <Disclosure as="nav" className="bg-cyan-600">
         {({ open }) => (
           <>
-            <a href="https://armanist.us.auth0.com/v2/logout">Logout</a>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex items-center justify-between h-16">
                 <div className="flex items-center">
@@ -50,7 +48,7 @@ const DashboardNav = (props: Props) => {
                         <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                           <Menu.Item>
                             <a
-                              href="https://armanist.us.auth0.com/v2/logout"
+                              href="/#"
                               onClick={() =>
                                 logout({
                                   returnTo: window.location.origin,

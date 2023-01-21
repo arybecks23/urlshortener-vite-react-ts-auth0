@@ -10,7 +10,10 @@ const Header = (props: Props) => {
   const { loginWithRedirect } = useAuth0();
 
   const navigation = [
-    { name: "LOG IN", onClick: () => loginWithRedirect() },
+    {
+      name: "LOG IN",
+      onClick: () => loginWithRedirect(),
+    },
     {
       name: "SIGN UP",
       onClick: () => loginWithRedirect({ screen_hint: "signup" }),

@@ -13,6 +13,7 @@ import App from "./App";
 import "./index.css";
 import Dashboard from "./routes/Dashbaord";
 import Home from "./routes/Home";
+// import Profile from "./routes/Profile";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
     path: "/dashboard",
     element: <Dashboard />,
   },
+  // {
+  //   path: "/profile",
+  //   element: <Profile />,
+  // },
 ]);
 const auth0Domain = import.meta.env.VITE_AUTH0_DOMAIN;
 const auth0ClientId = import.meta.env.VITE_AUTH0_CLIENTID;

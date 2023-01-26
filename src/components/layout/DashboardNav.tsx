@@ -47,8 +47,7 @@ const DashboardNav = (props: Props) => {
                       >
                         <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                           <Menu.Item>
-                            <a
-                              href={import.meta.env.VITE_AUTH0_LOGOUT_URL}
+                            <button
                               onClick={() =>
                                 logout({
                                   returnTo: window.location.origin,
@@ -59,7 +58,7 @@ const DashboardNav = (props: Props) => {
                               }
                             >
                               Logout
-                            </a>
+                            </button>
                           </Menu.Item>
                         </Menu.Items>
                       </Transition>

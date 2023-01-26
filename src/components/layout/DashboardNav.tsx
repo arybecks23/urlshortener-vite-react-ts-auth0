@@ -8,7 +8,7 @@ const DashboardNav = (props: Props) => {
   const { user, logout } = useAuth0();
   if (user) {
     return (
-      <Disclosure as="nav" className="bg-cyan-600">
+      <Disclosure as="nav" className="bg-sky-200">
         {({ open }) => (
           <>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

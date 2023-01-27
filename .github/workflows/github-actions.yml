@@ -18,4 +18,4 @@ jobs:
           npm i
           npm i pm2@latest -g #install pm2 global
           pm2 list
-          pm2 start lazy-link-server.js ||  pm2 restart lazy-link-server.js
+          pm2 start server.js --name=LazyLink-BackendAPI ||  pm2 restart LazyLink-BackendAPI

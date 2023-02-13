@@ -10,7 +10,7 @@ const createShortURL = async (req, res) => {
   }
   let baseURL = process.env.BACKENDURL;
   const urlRegExp =
-    /((?:(?:http?|ftp)[s]*:\/\/)?[a-z0-9-%\/\&=?\.]+\.[a-z]{2,4}\/?([^\s<>\#%"\,\{\}\\|\\\^\[\]`]+)?)/gi;
+    /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/gi;
 
   if (urlRegExp.test(url) === true) {
     const short = await nanoid(7);
